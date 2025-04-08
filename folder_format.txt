@@ -1,0 +1,63 @@
+toronto-weather-estimator/
+├── .github/
+│   ├── workflows/            # GitHub Actions CI/CD workflows
+│   │   ├── python-test.yml
+│   │   └── deploy.yml
+│   └── ISSUE_TEMPLATE.md     # Standardized issue template
+├── backend/
+│   ├── app/                  # FastAPI/Flask application
+│   │   ├── __init__.py
+│   │   ├── main.py           # Main application file
+│   │   ├── models/           # Database models
+│   │   │   └── weather.py
+│   │   ├── routes/           # API routes
+│   │   │   └── api.py
+│   │   ├── schemas/          # Pydantic models
+│   │   │   └── weather.py
+│   │   └── utils/            # Utility functions
+│   │       └── weather_data.py
+│   ├── tests/                # Backend tests
+│   │   ├── unit/
+│   │   └── integration/
+│   ├── requirements.txt      # Python dependencies
+│   └── Dockerfile
+├── frontend/
+│   ├── public/               # Static files
+│   ├── src/
+│   │   ├── components/       # React components
+│   │   │   ├── WeatherForm.jsx
+│   │   │   ├── WeatherChart.jsx
+│   │   │   └── ...
+│   │   ├── pages/            # Page components
+│   │   │   ├── Home.jsx
+│   │   │   ├── About.jsx
+│   │   │   └── ...
+│   │   ├── services/         # API service calls
+│   │   │   └── weather.js
+│   │   ├── styles/           # CSS/SCSS files
+│   │   ├── App.jsx           # Main app component
+│   │   └── index.js          # Entry point
+│   ├── package.json          # Frontend dependencies
+│   ├── Dockerfile
+│   └── .env.local            # Frontend environment variables
+├── ml/
+│   ├── data/                 # Weather datasets
+│   │   ├── raw/              # Raw data files
+│   │   ├── processed/        # Processed data files
+│   │   └── toronto_weather.csv  # Sample dataset
+│   ├── notebooks/            # Jupyter notebooks
+│   │   ├── 01_data_exploration.ipynb
+│   │   ├── 02_feature_engineering.ipynb
+│   │   └── 03_model_training.ipynb
+│   ├── models/               # Trained models
+│   │   ├── random_forest.pkl
+│   │   └── scaler.pkl
+│   ├── scripts/              # Python scripts
+│   │   ├── train_model.py
+│   │   ├── predict.py
+│   │   └── data_processing.py
+│   └── requirements.txt      # ML-specific dependencies
+├── docker-compose.yml        # For multi-container setup
+├── LICENSE
+├── README.md                 # Project documentation
+└── .gitignore
